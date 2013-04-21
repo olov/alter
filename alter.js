@@ -1,4 +1,4 @@
-// simple-is.js
+// alter.js
 // MIT licensed, see LICENSE file
 // Copyright (c) 2013 Olov Lassus <olov.lassus@gmail.com>
 
