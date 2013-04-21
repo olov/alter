@@ -1,0 +1,25 @@
+{
+  "name": "alter",
+  "version": "0.1.0",
+  "description": "alters a string by replacing multiple range fragments in one fast pass",
+  "main": "alter.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/olov/alter.git"
+  },
+  "keywords": [
+    "string",
+    "manipulation",
+    "replace",
+    "alter",
+    "modify"
+  ],
+  "scripts": {
+    "test": "tap test/*.js"
+  },
+  "devDependencies": {
+    "tap": "~0.4.0"
+  },
+  "author": "Olov Lassus <olov.lassus@gmail.com>",
+  "license": "MIT"
+}
