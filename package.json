@@ -1,6 +1,6 @@
 {
   "name": "alter",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "alters a string by replacing multiple range fragments in one fast pass",
   "main": "alter.js",
   "repository": {
