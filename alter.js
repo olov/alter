@@ -3,6 +3,7 @@
 // Copyright (c) 2013 Olov Lassus <olov.lassus@gmail.com>
 
 var assert = require("assert");
+var stableSort = require("stable");
 
 // fragments is a list of {start: index, end: index, str: string to replace with}
 function alter(str, fragments) {
@@ -15,19 +16,16 @@ function alter(str, fragments) {
     assert(typeof str === "string");
     assert(isArray(fragments));
 
-    fragments = fragments.map(function(v) {
-        return v;
-    }); // copy before destructive sort
-
-    fragments.sort(function(a, b) {
+    // stableSort isn't in-place so no need to copy array first
+    var sortedFragments = stableSort(fragments, function(a, b) {
         return a.start - b.start;
     });
 
     var outs = [];
 
     var pos = 0;
-    for (var i = 0; i < fragments.length; i++) {
-        var frag = fragments[i];
+    for (var i = 0; i < sortedFragments.length; i++) {
+        var frag = sortedFragments[i];
 
         assert(pos <= frag.start);
         assert(frag.start <= frag.end);

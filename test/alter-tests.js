@@ -45,3 +45,13 @@ test("nop2", function(t) {
     ]), "0123456789");
     t.end();
 });
+
+test("orderedinsert-stable", function(t) {
+    t.equal(alter("0123456789", [
+        {start: 5, end: 5, str: "a"},
+        {start: 5, end: 5, str: "b"},
+        {start: 5, end: 5, str: "c"},
+        {start: 5, end: 6, str: "d"},
+    ]), "01234abcd6789");
+    t.end();
+});
