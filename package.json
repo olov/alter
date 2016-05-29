@@ -23,6 +23,9 @@
   "devDependencies": {
     "tap": "~0.4.0"
   },
+  "files": [
+    "alter.js"
+  ],
   "author": "Olov Lassus <olov.lassus@gmail.com>",
   "license": "MIT"
 }
